@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consloas;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+
+.container .box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: #fff;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: .5s;
+}
+
+.container .box:hover {
+    transform: translateY(-20px);
+}
+
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+
+.container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    filter: blur(30px);
+}
+
+.container .box:nth-child(2):after,
+.container .box:nth-child(2):before {
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.container .box:nth-child(3):after,
+.container .box:nth-child(3):before {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.container .box span {
+    position: absolute;
+    inset: 6px;
+    background: rgb(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.container .box span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.container .box .content {
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+
+}
+
+.container .box .content h2 {
+    font: 2em "";
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container .box .content p {
+    font: 1.1em/1.4em "";
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.container .box .content a {
+    display: inline-block;
+    font:700  1.1em "";
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
