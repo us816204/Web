@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to, bottom, #f1f4f9, #dff1ff);
+}
+
+section .color {
+    position: absolute;
+    filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #ff359b;
+}
+
+section .color:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #fffd87;
+}
+
+section .color:nth-child(3) {
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    background: #00d2ff;
+}
+
+.box {
+    position: relative;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    width: 120px;
+    height: 37px;
+    position: relative;
+    color: #fff;
+    font: bold 24px "";
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.form h2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    transition: border-color 0s ease-in 0.8s, width 0.2s ease-in 0.6s, height 0.2s ease-in 0.4s;
+}
+
+.form h2:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+    box-sizing: border-box;
+    transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.2s, height 0.2s ease-out 0s;
+}
+
+.form h2:hover:after,
+.form h2:hover:before {
+
+    height: 100%;
+    width: 100%;
+}
+
+.form h2:hover:after {
+    border-bottom-color: white;
+    transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+}
+
+.form .inputBox {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.form .inputBox input::placeholder {
+    background: linear-gradient(to right, #D16BA5, #86A8E7, #5FFBF1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+button {
+    font-weight: 600;
+    margin: 45px 0 10px 0;
+    width: 320px;
+    position: relative;
+    padding: 10px 24px;
+    box-sizing: border-box;
+    border: 0.5px solid white;
+    border-radius: 20px;
+    background: transparent;
+    color: black;
+    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.12);
+    font-size: 18px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color .25s;
+}
+button:active{
+    box-shadow: 0px 0px 0px 0px transparent;
+}
+.form a{
+    color: black;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.form a:hover{
+    color: rgb(253, 148, 80);
+    border-bottom: 1px solid rgb(253, 148, 80);
+    margin-bottom: 5px;
+}
+.form p:nth-of-type(1){
+    margin: 5px 0;
+    position: absolute;
+    inset: 230px 0 0 290px;
+}
+.form p:nth-of-type(2){
+    margin: 5px 0;
+    position: absolute;
+    inset: 355px 0 0 280px;
+}
