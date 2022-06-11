@@ -1,0 +1,140 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+header{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 35px 16%;
+	background: transparent;
+	transition: ease .40s;
+}
+.logo img{
+	width: 140px;
+	height: auto;
+}
+.navlist{
+	display: flex;
+}
+.navlist a{
+	display: inline-block;
+	color: #040000;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	padding: 10px 20px;
+	margin: 0 5px;
+	transition: all .40s ease;
+}
+.navlist a:hover{
+	background: #a32e37;
+	color: #fff;
+}
+.navlist a.active{
+	background: #a32e37;
+	color: #fff;
+}
+#menu-icon{
+	color: #fff;
+	font-size: 40px;
+	z-index: 10001;
+	cursor: pointer;
+	display: none;
+}
+section{
+	padding: 0 16%;
+}
+.main{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: url(../img/background.jpg);
+	background-size: cover;
+	background-position: center;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	align-items: center;
+}
+.main-text h1{
+	font-size: 90px;
+	color: #fff;
+	max-width: 200px;
+	line-height: 1.1;
+	margin: 0 0 60px 0;
+}
+button{
+	display: inline-block;
+	width: 230px;
+	height: 58px;
+	background: #a32e37;
+	color: #fff;
+	border: none;
+	outline: none;
+	line-height: 58px;
+	font-size: 20px;
+	font-weight: 300;
+	transition: all .40s ease;
+	cursor: pointer;
+}
+button:hover{
+	transform: scale(0.9);
+	background: #fff;
+	color: #040000;
+}
+.left{
+	position: absolute;
+	top: 50%;
+	left: 7%;
+	transform: translateY(-50%);
+}
+.right{
+	position: absolute;
+	top: 50%;
+	right: 7%;
+	transform: translateY(-50%);
+}
+
+@media (max-width: 1330px){
+	header{
+		padding: 10px 5%;
+	}
+	.main-text h1{
+		font-size: 80px;
+		transition: .3s;
+	}
+}
+@media (max-width: 990px){
+	#menu-icon{
+		display: block;
+	}
+	.navlist{
+		position: absolute;
+		top: -600px;
+		left: 0;
+		right: 0;
+		flex-direction: column;
+		background: rgba(8,5,0,0.9);
+		text-align: left;
+		transition: all .40s ease;
+	}
+	.navlist a{
+		display: block;
+		padding: 1rem;
+		margin: 0.5rem;
+		border-left: 2px solid #fff;
+		color: #fff;
+	}
+	.navlist.open{
+		top: 100%;
+	}
+}
