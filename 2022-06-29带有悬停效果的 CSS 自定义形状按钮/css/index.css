@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #cbe058;
+}
+
+a {
+    position: relative;
+    padding: 15px 45px;
+    background: #fff;
+    color: #555;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 500 1.8em "";
+    transition: 0.5s;
+    clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 10% 50%, 0% 0%);
+}
+
+a:hover {
+    background: #a7b612;
+    color: #fff;
+    letter-spacing: 4px;
+    clip-path: polygon(100% 0%, 90% 50%, 100% 1000%, 10% 100%, 0% 50%, 10% 0);
+}
