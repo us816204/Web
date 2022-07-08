@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用JavaScript制作的垂直菜单栏</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/2022-07-08使用JavaScript制作的垂直菜单栏/css/index.css">
+</head>
+
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active" data-color="#f53b57">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="list" data-color="#3c40c6">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <span class="title">Profile</span>
+                </a>
+            </li>
+            <li class="list" data-color="#05c46b">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-message"></i>
+                    </span>
+                    <span class="title">Message</span>
+                </a>
+            </li>
+            <li class="list" data-color="#0fbcf9">
+                <a href="#">
+                    <span class="icon">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </span>
+                    <span class="title">Help</span>
+                </a>
+            </li>
+            <li class="list" data-color="#ffa801">
+                <a href="#"><span class="icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+                    <span class="title">Settings</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    <script>
+        let list = document.querySelectorAll('li');
+        for (let i = 0; i < list.length; i++) {
+            list[i].onmouseenter = function() {
+                let j = 0;
+                while (j < list.length) {
+                    list[j++].className = 'list';
+                }
+                list[i].className = 'list active';
+            }
+        }
+        list.forEach(elements => {
+            elements.addEventListener('mouseenter',function
+            (event){
+                let bg = document.querySelector('body')
+                let color = event.target.getAttribute
+                ('data-color');
+                bg.style.background = color;
+            })
+            })
+
+    </script>
+</body>
+
+</html>
