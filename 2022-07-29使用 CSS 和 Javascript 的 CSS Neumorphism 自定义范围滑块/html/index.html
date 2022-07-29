@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022-07-29使用 CSS 和 Javascript 的 CSS Neumorphism 自定义范围滑块</title>
+    <link rel="stylesheet" href="/2022-07-29使用 CSS 和 Javascript 的 CSS Neumorphism 自定义范围滑块/css/style.css">
+</head>
+
+<body>
+    <div class="box">
+        <input type="range" class="range" value="0" min="0" max="100" onmousemove="rangeValue(this.
+        value)">
+        <span id="rangeValue">0</span>
+    </div>
+    <script>
+        function rangeValue(value) {
+            document.getElementById('rangeValue').innerHTML
+                = value;
+        }
+    </script>
+</body>
+
+</html>
