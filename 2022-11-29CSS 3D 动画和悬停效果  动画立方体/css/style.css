@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    width: 50;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.cude {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+.cude div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate 6s linear infinite;
+    transform: rotateX(-20deg) rotateY(25deg);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+
+    100% {
+        transform: rotatex(-20deg) rotateY(0deg);
+    }
+}
+
+.cude .big span {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--clr);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.cude:hover .big span {
+    background: transparent;
+    border: 10px solid #ffa20d;
+    filter: drop-shadow(0 0 20px #ffa20d);
+}
+
+.cude .big span.top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.cude .big span.top::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-350px);
+    background: rgb(0, 0, 0, 0.5);
+    filter: blur(50px);
+}
+
+
+.cude2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -400px);
+}
+
+.cude2 div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: animate2 6s linear infinite;
+    scale: 0.5;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotatex(-20deg) rotateY(360deg);
+    }
+}
+
+.cude2 .big span {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: var(--clr);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+    transform-style: preserve-3d;
+}
+
+.cude:hover ~ .cude2 .big span {
+    background: transparent;
+    border: 10px solid #fff;
+    filter: drop-shadow(0 0 20px #fff);
+}
+
+.cude2 .big span.top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.cude2 .big span.top::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateZ(-350px);
+    background: rgb(0, 0, 0, 0.35);
+    filter: blur(50px);
+}
